@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" class="mediaquerydependent" 
+	      href="standard.css"
+	      data-media="screen and (min-width: 600px)" data-href="green.css">
+	<link rel="stylesheet" class="mediaquerydependent" 
+	      data-media="screen and (min-width: 4000px)" data-href="blue.css">
+	<title></title>
+</head>
+<body>
+<p>This document has a light green background - when your browser is more than 600 pixels wide it gets a green background and you'll see an image below. Browsers over 4000 pixels wide have a blue background. Neither the CSS nor the image will be loaded in browsers less than 600 pixels wide.</p>
+
+<img data-src="http://placekitten.com/g/200/300" 
+     data-alt="kitten" 
+     class="mediaquerydependent" 
+     data-media="screen and (min-width: 600px)">
+
+<script src="../mediaqueryload-min.js"></script>
+</body>
+</html>

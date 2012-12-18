@@ -1,0 +1,1 @@
+function mediaqueryload(){for(var a=document.querySelectorAll(".mediaquerydependent"),b=a.length,c=null,d=null;b--;)if(c=a[b],c.dataset.media&&window.matchMedia(c.dataset.media).matches)for(d in c.dataset)"media"!==d&&c.setAttribute(d,c.dataset[d])}mediaqueryload();
