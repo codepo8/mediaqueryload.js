@@ -8,7 +8,6 @@ function mediaqueryload(ev) {
     while (i--) {
       current = queriedresource[i];
       for (attr in current.dataset) {
-        console.log(attr);
         current.removeAttribute(attr);
       }
     }
