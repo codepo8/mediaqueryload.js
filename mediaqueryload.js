@@ -1,10 +1,21 @@
-function mediaqueryload(){
+function mediaqueryload(ev) {
   var queriedresource = document.querySelectorAll('.mediaquerydependent'),
       all = queriedresource.length,
+      i = all,
       current = null,
       attr = null;
-  while (all--) {
-    current = queriedresource[all];
+  if (ev && ev.type === 'resize') {
+    while (i--) {
+      current = queriedresource[i];
+      for (attr in current.dataset) {
+        console.log(attr);
+        current.removeAttribute(attr);
+      }
+    }
+    i = all;
+  }
+  while (i--) {
+    current = queriedresource[i];
     if (  current.dataset.media &&
           window.matchMedia(current.dataset.media).matches) {
       for (attr in current.dataset) {
@@ -16,3 +27,4 @@ function mediaqueryload(){
   }
 }
 mediaqueryload();
+window.addEventListener('resize', mediaqueryload, false);
