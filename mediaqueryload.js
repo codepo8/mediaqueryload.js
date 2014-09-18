@@ -4,7 +4,7 @@ function mediaqueryload(ev) {
 	//get all tags with style "mediaquery"
 	var mediaqueryobjects = document.querySelectorAll('.mediaquery'),
 	
-	//check to se if a encapsulating div "page" exists
+	//check to see if a encapsulating div "page" exists
 	//useful when you need to hide old style on slow devices
 	page = document.querySelector(".page"),
 	
