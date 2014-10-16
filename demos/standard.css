@@ -1,3 +1,7 @@
 body {
 	background: #c0ffee;
 }
+
+.hidden {
+	display:none;
+}
